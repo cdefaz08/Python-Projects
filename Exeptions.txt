@@ -1,0 +1,78 @@
+Code on Python to get the Expeptions Data:
+    def print_exception_hierarchy(exception_class, indent=0):
+        print('  ' * indent + exception_class.__name__)
+        for subclass in exception_class.__subclasses__():
+            print_exception_hierarchy(subclass, indent + 1)
+
+    print_exception_hierarchy(Exception)
+
+
+Expeptions:
+  TypeError
+  StopAsyncIteration
+  StopIteration
+  ImportError
+    ModuleNotFoundError
+    ZipImportError
+  OSError
+    ConnectionError
+      BrokenPipeError
+      ConnectionAbortedError
+      ConnectionRefusedError
+      ConnectionResetError
+    BlockingIOError
+    ChildProcessError
+    FileExistsError
+    FileNotFoundError
+    IsADirectoryError
+    NotADirectoryError
+    InterruptedError
+    PermissionError
+    ProcessLookupError
+    TimeoutError
+    UnsupportedOperation
+    ItimerError
+  EOFError
+  RuntimeError
+    RecursionError
+    NotImplementedError
+    _DeadlockError
+  NameError
+    UnboundLocalError
+  AttributeError
+  SyntaxError
+    IndentationError
+      TabError
+  LookupError
+    IndexError
+    KeyError
+    CodecRegistryError
+  ValueError
+    UnicodeError
+      UnicodeEncodeError
+      UnicodeDecodeError
+      UnicodeTranslateError
+    UnsupportedOperation
+  AssertionError
+  ArithmeticError
+    FloatingPointError
+    OverflowError
+    ZeroDivisionError
+  SystemError
+    CodecRegistryError
+  ReferenceError
+  MemoryError
+  BufferError
+  Warning
+    UserWarning
+    DeprecationWarning
+    PendingDeprecationWarning
+    SyntaxWarning
+    RuntimeWarning
+    FutureWarning
+    ImportWarning
+    UnicodeWarning
+    BytesWarning
+    ResourceWarning
+  Error
+  _OptionError
