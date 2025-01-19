@@ -7,3 +7,8 @@ iter_text = iter(text)
 
 for char in iter_text:
     print(char)
+
+#iterar en cadena
+
+for char in text:
+    print(char)
