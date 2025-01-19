@@ -12,6 +12,10 @@ class Item:
         else:
             print(f"Not enough stock of {self.item_code} to sell.")
 
+    def increase_stock(self, quantity):
+        self.stock += quantity
+        print(f"You have successfully added {quantity} pcs to {self.item_code}. New stock: {self.stock}")
+
 class Store:
     def __init__(self):
         self.items = []
@@ -32,6 +36,12 @@ class Store:
         else:
             print(f"Item with code {item_code} not found in the store.")
 
+    def get(self, item_code, quantity):
+        for item in self.items:
+            if item.item_code == item_code:
+                item.increase_stock(quantity)
+                break
+
 # Create items
 item1 = Item("papas", "5", "20")
 item2 = Item("cocaola", "2", "10")
@@ -46,3 +56,6 @@ store.sell("papas", 5)  # Reduce stock of "papas" by 5
 store.sell("cocaola", 3)  # Reduce stock of "cocaola" by 3
 store.sell("papas", 30)  # Trying to sell more than available stock
 
+# Add inventory (Increase stock)
+store.get("papas", 5)  # Increase stock of "papas" by 5
+store.get("cocaola", 3)  # Increase stock of "cocaola" by 3
