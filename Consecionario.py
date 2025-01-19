@@ -58,6 +58,10 @@ vehiculo2 = Vehiculos("Nissan","Sentra")
 #create instances for Persona
 persona = Persona("John",1)
 persona2 = Persona("Jane",2)
+<<<<<<< HEAD
+=======
+persona3 = Persona("Doe",3)
+>>>>>>> Developer
 
 #Create a consecionario object
 consencionario = Concesionario()
@@ -67,6 +71,7 @@ consencionario.add_vehiculo(vehiculo1)
 consencionario.add_vehiculo(vehiculo2)
 consencionario.add_persona(persona)
 consencionario.add_persona(persona2)
+consencionario.add_persona(persona3)
 
 consencionario.buy_vehiculo(vehiculo1,persona)
 
