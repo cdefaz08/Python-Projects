@@ -6,7 +6,7 @@ class BankAccount:
 
     def deposit(self, amount):
         if self.is_active:
-            self.balance += amount
+            self.balance += amount 
             print(f"Deposited {amount} into account of {self.account_holder} su saldo actual es: {self.balance}")
         else:
             print("Account is not active")
